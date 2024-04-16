@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<style>
+  div.round2 {
+    border: 2px solid rgb(0, 46, 250);
+    border-radius: 8px;
+    padding: 5px;
+  }
+  ul {
+    display: inline-block;
+  }
+</style>
+<body>
+  <div class="round2" style="color: rgb(9, 9, 104);background-color: rgb(84, 97, 97);font-size: 18px;">
+    <h2 style="text-indent: 1px;">Scoreboard</h2>
+    <p style="display:flex;justify-content: center;font-size: 20px;" id="score"></p>
+  </div>
+  <ul>
+    <ol><input type="checkbox" id="st1" name=""><label style="font-size: 24px;" for="">Subtask 1 (10 points)</label></ol>
+    <ol><input type="checkbox" id="st2" name=""><label style="font-size: 24px;" for="">Subtask 2 (10 points)</label></ol>
+    <ol><input type="checkbox" id="st3" name=""><label style="font-size: 24px;" for="">Subtask 3 (10 points)</label></ol>
+    <ol><input type="checkbox" id="st" name=""><label style="font-size: 24px;" for="">Subtask 100pts (100 points)</label></ol>
+  </ul>
+  <ul>
+    <ol><input type="checkbox" id="st11" name=""><label style="font-size: 24px;" for="">Subtask 1 (10 points)</label></ol>
+    <ol><input type="checkbox" id="st21" name=""><label style="font-size: 24px;" for="">Subtask 2 (10 points)</label></ol>
+    <ol><input type="checkbox" id="st31" name=""><label style="font-size: 24px;" for="">Subtask 3 (10 points)</label></ol>
+    <ol><input type="checkbox" id="sts" name=""><label style="font-size: 24px;" for="">Subtask 100pts (100 points)</label></ol>
+  </ul>
+  <script>
+    let score = 0; // Initial score
+    let previousScore = 0;
+
+    const Subtask1 = document.getElementById('st1');
+    const paperButton = document.getElementById('st2');
+    const scissorsButton = document.getElementById('st3');
+    const Subtask = document.getElementById('st');
+    //task2
+    const ST1 = document.getElementById('st11');
+    const ST2 = document.getElementById('st21');
+    const ST3 = document.getElementById('st31');
+    const St1 = document.getElementById('sts');
+
+    // Display the initial score
+    document.getElementById('score').innerText = 'Score: ' + score;
+
+    // Increase score when a button is clicked
+    Subtask1.onclick = function() {
+      if (Subtask1.checked) {
+        score += 10;
+      } else {
+        score -= 10;
+      }
+      document.getElementById('score').innerText = 'Score: ' + score;
+    }
+
+    paperButton.onclick = function() {
+      if (paperButton.checked) {
+        score += 10;
+      } else {
+        score -= 10;
+      }
+      document.getElementById('score').innerText = 'Score: ' + score;
+    }
+
+    scissorsButton.onclick = function() {
+      if (scissorsButton.checked) {
+        score += 10;
+      } else {
+        score -= 10;
+      }
+      document.getElementById('score').innerText = 'Score: ' + score;
+    }
+
+    Subtask.onclick = function() {
+      if (Subtask.checked) {
+        score += 100;
+      } else {
+        score -= 100;
+      }
+      document.getElementById('score').innerText = 'Score: ' + score;
+    }
+
+    // task 2
+    ST1.onclick = function() {
+      if (ST1.checked) {
+        score += 10;
+      } else {
+        score -= 10;
+      }
+      document.getElementById('score').innerText = 'Score: ' + score;
+    }
+
+    ST2.onclick = function() {
+      if (ST2.checked) {
+        score += 10;
+      } else {
+        score -= 10;
+      }
+      document.getElementById('score').innerText = 'Score: ' + score;
+    }
+
+    ST3.onclick = function() {
+      if (ST3.checked) {
+        score += 10;
+      } else {
+        score -= 10;
+      }
+      document.getElementById('score').innerText = 'Score: ' + score;
+    }
+
+   St1.onclick = function() {
+      if (St1.checked) {
+        score += 100;
+      } else {
+        score -= 100;
+      }
+      document.getElementById('score').innerText = 'Score: ' + score;
+    }
+  </script>
+</body>
+</html>
